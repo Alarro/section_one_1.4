@@ -91,199 +91,181 @@ select {
 }
 
 body {
-    background-color: #FFFFFF;
-    margin: 0px;
-    padding: 0px;;
-    font-family: 'TTLakes-Medium';
-    width: 320px;
-    position: absolute;
-    font-size: 16px;
-    line-height: 24px;
-    box-shadow: 16px 0px 52px 0px #0E185033;
+  background-color: #ffffff;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'TTLakes-Medium';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  height: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  box-shadow: 16px 0px 52px 0px #0e185033;
+  z-index: 2000;
+}
 
+.aside_menu {
+  width: 320px;
+  height: 100%;
+  z-index: 2000;
+  overflow-y: auto;
+}
 
+.main_menu {
+  overflow-y: auto;
 }
 
 .menu-first-section {
-    display: flex;
-    justify-content: space-between;
-    
+  display: flex;
+  justify-content: space-between;
 }
 
-.menu-first-section-back-9 {
-    width: 40px;
-    height: 40px;
-    background: #ff3e79;
-    border-radius: 20px;
-    margin-top: 23px;
-    margin-left: 24px;   
-    margin-bottom: 53px; 
-    cursor: pointer;
-  }
-
-.menu-first-section-back-9:hover {
-    background-color:#ad4766 ;
+.menu-first-section-icon-back {
+  margin-top: 23px;
+  margin-left: 24px;
+  margin-bottom: 53px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
 }
 
-.menu-first-section-back-9-icon {
-    margin: 11px 13px 13px 11px;
-    text-align: center;
+.menu-first-section-icon-back-icon {
+  margin: 11px 13px 13px 11px;
+  text-align: center;
 }
 
 .menu-first-section-logo {
-    margin-top: 18.73px;
-    margin-left: 16.73px;
+  width: 97px;
+  height: 51px;
+  margin-top: 20px;
+  margin-right: 64px;
+  background-image: url(images/menu_logo.png);
 }
 
-.menu-first-section-back-10 {
-    width: 40px;
-    height: 40px;
-    background: #ff3e79;
-    border-radius: 20px;
-    margin-top: 23px;
-    margin-right: 24px;    
-    margin-left: 78.73px;
-    cursor: pointer;
-  }
-
-.menu-first-section-back-10:hover {
-    background-color:#ad4766;
-}
-
-.menu-first-section-back-10-icon {
-    margin-top: 11px;
-    margin-left: 11px;
+.menu-first-section-icon-search {
+  cursor: pointer;
+  margin-top: 23px;
+  margin-right: 24px;
+  width: 40px;
+  height: 40px;
 }
 
 .menu-second-section {
-    position: relative;
+  position: relative;
 }
 
 .menu-second-section-main {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
 }
 
-.tab:hover{
-background-color: #e0e0e0;
+.menu-tab:hover {
+  background-color: #e0e0e0;
 }
 
-.tab--active {
-    color: #7E7E82;
+.menu-tab--active {
+  color: #7e7e82;
 }
 
-.tab--active::before {
-    content: '';
-    position: absolute;
-    left: 0px;  
-    top: 12px;
-    height: 32px;
-    width: 4px;
-    border-radius: 0px 10px 10px 0px;
-    -webkit-border-radius: 0px 10px 10px 0px;
-    -moz-border-radius: 0px 10px 10px 0px;
-    -ms-border-radius: 0px 10px 10px 0px;
-    -o-border-radius: 0px 10px 10px 0px;
-    background-color: #41f6d7;
-   }
+.menu-tab--active::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 12px;
+  height: 32px;
+  width: 4px;
+  border-radius: 0px 10px 10px 0px;
+  -webkit-border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 10px 10px 0px;
+  -ms-border-radius: 0px 10px 10px 0px;
+  -o-border-radius: 0px 10px 10px 0px;
+  background-color: #41f6d7;
+}
 
-.tab {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 20px;
-    cursor: pointer;
-    position: relative;
+.menu-tab {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  cursor: pointer;
+  position: relative;
 }
 
 .menu-third-section {
-    display: flex;
-    flex-direction: column;
-    margin-top:268px;
-    margin-left:24px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 268px;
+  margin-left: 24px;
 }
 
-.menu-third-section-icons{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+.menu-third-section-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
-.menu-third-section-back-10 {
-    width: 40px;
-    height: 40px;
-    background: #ff3e79;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-right: 16px;
-  }
+.menu-third-section-icon-call {
+  cursor: pointer;
+  margin-right: 16px;
+}
 
-  .icons-call {
-    margin: 11px;
-  }
+.icons-call {
+  margin: 11px;
+}
 
-  .menu-third-section-back-11 {
-    width: 40px;
-    height: 40px;
-    background: #ff3e79;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-right:16px;
-  }
+.menu-third-section-icon-chat {
+  cursor: pointer;
+  margin-right: 16px;
+}
 
-  .icons-contact {
-        margin: 11px 10px 9px 10px;
-  }
+.icons-contact {
+  margin: 11px 10px 9px 10px;
+}
 
-  .menu-third-section-back-12 {
-    width: 40px;
-    height: 40px;
-    background: #ff3e79;
-    border-radius: 20px;
-    cursor: pointer;
-  }
+.menu-third-section-icon-profile {
+  cursor: pointer;
+}
 
-  .icons-cabinet {
-    margin: 10px 10px 12px 10px;
-  }
+.icons-cabinet {
+  margin: 10px 10px 12px 10px;
+}
 
-  .menu-third-section-email {
-    margin-top: 16px;
-    font-size: 16px;
-    line-height: 24px;
-  }
+.menu-third-section-email {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
 
-  .menu-third-section-number {
-    margin-top: 12px;
-    font-size: 24px;
-    line-height: 32px;
-    font-family: 'TTLakes-Bold';
-  }
+.menu-third-section-number {
+  margin-top: 12px;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: 'TTLakes-Bold';
+}
 
-  .menu-third-section-language {
-    margin-top: 40px;
-    margin-bottom: 32px;
-    display: flex;
-    flex-direction: row;
-  }
+.menu-third-section-language {
+  margin-top: 40px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+}
 
-  .menu-third-section-language-ru {
-    padding-right: 3.5px;
-  }
-  
-  .menu-third-section-language-en {
-    padding-left: 3.5px;
-    padding-right: 3.5px;
-  }
+.menu-third-section-language-ru {
+  padding-right: 3.5px;
+}
 
-  .menu-third-section-language-ch {
-    padding-left: 3.5px;
-  }
+.menu-third-section-language-en {
+  padding-left: 3.5px;
+  padding-right: 3.5px;
+}
 
-  .language-tab--active {
-    color: #7E7E82;
-  }
+.menu-third-section-language-ch {
+  padding-left: 3.5px;
+}
 
-
-
+.language-menu-tab--active {
+  color: #7e7e82;
+}
