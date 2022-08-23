@@ -193,6 +193,7 @@ select {
   display: flex;
   flex-direction: column;
   margin-left: 24px;
+  margin-bottom: 32px;
 }
 
 .footer__container_buttons {
