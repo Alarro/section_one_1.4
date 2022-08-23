@@ -90,88 +90,83 @@ select {
   src: url(./fonts/TTLakes-Regular.ttf);
 }
 
-body {
+.side-menu {
   background-color: #ffffff;
   margin: 0px;
   padding: 0px;
+  top: 0;
   font-family: 'TTLakes-Medium';
   position: fixed;
-  top: 0;
-  bottom: 0;
   width: 320px;
   height: 100%;
   font-size: 16px;
   line-height: 24px;
   box-shadow: 16px 0px 52px 0px #0e185033;
   z-index: 2000;
+  overflow-y: scroll;
 }
 
-.aside_menu {
-  width: 320px;
-  height: 100%;
-  z-index: 2000;
-  overflow-y: auto;
+.icon-button {
+  width: 40px;
+  height: 40px;
+  border: 0px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-color: #FF3E79;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.main_menu {
-  overflow-y: auto;
+.icon-button_back {
+  background-image: url(images/iconback.svg);
+  margin-left: 16px;
+  margin-top: 24px;
+  margin-bottom: 16px;
 }
 
-.menu-first-section {
+.icon-button_search {
+  background-image: url(images/iconsearch.svg);
+  margin-right: 16px;
+  margin-top: 24px;
+}
+
+.header__container {
   display: flex;
   justify-content: space-between;
 }
 
-.menu-first-section-icon-back {
-  margin-top: 23px;
-  margin-left: 24px;
-  margin-bottom: 53px;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-}
-
-.menu-first-section-icon-back-icon {
-  margin: 11px 13px 13px 11px;
-  text-align: center;
-}
-
-.menu-first-section-logo {
+.header__logo {
   width: 97px;
   height: 51px;
   margin-top: 20px;
   margin-right: 64px;
-  background-image: url(images/menu_logo.png);
 }
 
-.menu-first-section-icon-search {
-  cursor: pointer;
-  margin-top: 23px;
-  margin-right: 24px;
-  width: 40px;
-  height: 40px;
-}
 
-.menu-second-section {
+.side-menu__nav {
   position: relative;
 }
 
-.menu-second-section-main {
+.nav__aside-menu__tablist {
   display: flex;
   flex-direction: column;
   position: relative;
   justify-content: center;
 }
 
-.menu-tab:hover {
+.aside-menu__tab:hover {
   background-color: #e0e0e0;
 }
 
-.menu-tab--active {
+.aside-menu__tab--active {
   color: #7e7e82;
 }
 
-.menu-tab--active::before {
+.aside-menu__tab--active::before {
   content: '';
   position: absolute;
   left: 0px;
@@ -186,7 +181,7 @@ body {
   background-color: #41f6d7;
 }
 
-.menu-tab {
+.aside-menu__tab {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 20px;
@@ -194,78 +189,103 @@ body {
   position: relative;
 }
 
-.menu-third-section {
+.footer {
   display: flex;
   flex-direction: column;
-  margin-top: 268px;
   margin-left: 24px;
 }
 
-.menu-third-section-icons {
+.footer__container_buttons {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
-.menu-third-section-icon-call {
-  cursor: pointer;
+.icon-button_call {
   margin-right: 16px;
+  background-image: url(images/iconcall.svg);
 }
 
-.icons-call {
-  margin: 11px;
-}
-
-.menu-third-section-icon-chat {
-  cursor: pointer;
+.icon-button_chat {
   margin-right: 16px;
+  background-image: url(images/iconchat.svg);
 }
 
-.icons-contact {
-  margin: 11px 10px 9px 10px;
+
+.icon-button_profile {
+  background-image: url(images/iconprofile.svg);
 }
 
-.menu-third-section-icon-profile {
-  cursor: pointer;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-.icons-cabinet {
-  margin: 10px 10px 12px 10px;
-}
-
-.menu-third-section-email {
+.footer_email {
   margin-top: 16px;
   font-size: 16px;
   line-height: 24px;
 }
 
-.menu-third-section-number {
+.footer_number {
   margin-top: 12px;
   font-size: 24px;
   line-height: 32px;
   font-family: 'TTLakes-Bold';
 }
 
-.menu-third-section-language {
+.footer_language {
   margin-top: 40px;
   margin-bottom: 32px;
   display: flex;
   flex-direction: row;
 }
 
-.menu-third-section-language-ru {
+.footer-button {
+  border: 0px;
+  background-color: #ffffff;
+}
+
+.button_language-ru {
   padding-right: 3.5px;
 }
 
-.menu-third-section-language-en {
+.button_language-en {
   padding-left: 3.5px;
   padding-right: 3.5px;
 }
 
-.menu-third-section-language-ch {
+.button_language-ch {
   padding-left: 3.5px;
 }
 
-.language-menu-tab--active {
+.language-aside-menu__tab--active {
   color: #7e7e82;
+}
+
+@media (min-width: 360px) {
+
+.icon-button_back {
+  margin-left: 24px;
+}
+
+.icon-button_search {
+  margin-right: 24px;
+}
+
+.footer__container_buttons {
+  padding-top: 32px;
+  margin-left: 8px;
+}
+}
+
+@media (min-width: 768px) {
+
+  .side-menu {
+    position: sticky;
+  }
+
+  .footer {
+    padding-top: 50%;
+  }
 }
